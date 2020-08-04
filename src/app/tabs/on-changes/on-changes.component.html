@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>OnChange</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" value="" name="name" [(ngModel)]="name">
+                
+            </mat-form-field>
+            <!-- <button mat-button (click)="updateName()"><mat-icon>check</mat-icon></button> -->
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <!-- <app-name-changes [name]="newName"></app-name-changes> -->
+        <app-name-changes [name]="name"></app-name-changes>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>InputSimples</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" value="" name="name" [(ngModel)]="person.name">
+                
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input matInput placeholder="Age" value="" name="age" [(ngModel)]="person.age">
+            </mat-form-field>
+           
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="save(person)">Save</button>
+    </mat-card-actions>
+</mat-card>
+
+<mat-list role="list" *ngFor="let p of arrName">
+    <mat-list-item role="listitem"> 
+        <p>Name: {{p.name}}</p>
+    </mat-list-item>
+    <mat-list-item role="listitem"> 
+        <p>Age: {{p.age}}</p>
+    </mat-list-item>
+</mat-list>

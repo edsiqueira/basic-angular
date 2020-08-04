@@ -1,0 +1,9 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Timer</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{round(miliseconds / 1000)}}:{{miliseconds % 1000}}</p>
+        <mat-progress-bar mode="indeterminate" *ngIf="runnig"></mat-progress-bar>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>EventEmitter</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <h3>
+            Value: {{value}}
+        </h3>
+        <app-child-item [title]="title" (inc)="incBy($event)"></app-child-item>
+    </mat-card-content>
+</mat-card>

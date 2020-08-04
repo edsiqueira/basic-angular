@@ -1,0 +1,25 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>WorkList</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <mat-form-field class="form-field">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" value="" name="name" [(ngModel)]="name">
+                
+            </mat-form-field>
+            <mat-form-field class="form-field">
+                <mat-label>Age</mat-label>
+                <input matInput placeholder="Age" value="" name="age" [(ngModel)]="age" type="number">
+            </mat-form-field>
+            <button mat-mini-fab color="primary" mat-button (click)="save()"><mat-icon>check</mat-icon></button>
+        </form>
+    </mat-card-content>
+</mat-card>
+
+
+<app-client *ngFor="let c of clients let i = index" 
+[client]="c" (removeClient)="deleteClient(i)" (updateClient)="updateClient($event, i)">
+
+</app-client>
